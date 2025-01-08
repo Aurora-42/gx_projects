@@ -20,4 +20,8 @@ expectation = gx.expectations.ExpectColumnValuesToBeBetween(
 )
 
 validation_result = batch.validate(expectation)
-print(f"resultado Expectation: {validation_result['success']}")
+
+if validation_result.success:
+    print("Succes in expectations!")
+else:
+    print("Failure in expectations!")
